@@ -41,7 +41,7 @@ MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/'
 ALLOWED_HOSTS = ['.vercel.app','127.0.0.1']
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "https://react-deployment-vercel-orpin.vercel.app/",
 ]
 
 
