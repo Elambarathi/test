@@ -25,11 +25,11 @@ SECRET_KEY = 'django-insecure-^^h#5to-t0asa-4lorg97iadbi(9gk6i5k6l86%)ttqh^km-7i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-AWS_ACCESS_KEY_ID = os.getenv('KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.getenv('ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = os.getenv('BUCKET_NAME')
-AWS_S3_REGION_NAME =os.getenv('REGION_NAME')  # For example, 'us-east-1'
-AWS_S3_SIGNATURE_VERSION = os.getenv('VERSION')
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_REGION_NAME = os.getenv('AWS_S3_REGION_NAME')
+AWS_S3_SIGNATURE_VERSION = 's3v4'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 AWS_S3_VERIFY = True
@@ -98,15 +98,14 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # or 'django.db.backends.mysql' for MySQL
-        'NAME':os.getenv('name'),
-        'USER': os.getenv('user'),
-        'PASSWORD': os.getenv('password'),
-        'HOST': os.getenv('host'),
-        'PORT': os.getenv('port'),  # Use 3306 if you are using MySQL
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
