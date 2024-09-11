@@ -25,10 +25,10 @@ SECRET_KEY = 'django-insecure-^^h#5to-t0asa-4lorg97iadbi(9gk6i5k6l86%)ttqh^km-7i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-AWS_ACCESS_KEY_ID = ''
-AWS_SECRET_ACCESS_KEY = ''
-AWS_STORAGE_BUCKET_NAME = 'testelambarathi'
-AWS_S3_REGION_NAME = 'ap-southeast-2'  # For example, 'us-east-1'
+AWS_ACCESS_KEY_ID = 'KEY_ID'
+AWS_SECRET_ACCESS_KEY = 'ACCESS_KEY'
+AWS_STORAGE_BUCKET_NAME = 'BUCKET_NAME'
+AWS_S3_REGION_NAME = 'REGION_NAME'  # For example, 'us-east-1'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
@@ -99,11 +99,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',  # or 'django.db.backends.mysql' for MySQL
-        'NAME':'elambarathi',
-        'USER': 'django',
-        'PASSWORD': 'Barathi24',
-        'HOST': 'myproject-db.cpq0iicus6ls.ap-southeast-2.rds.amazonaws.com',
-        'PORT': '5432',  # Use 3306 if you are using MySQL
+        'NAME':'name',
+        'USER': 'user',
+        'PASSWORD': 'password',
+        'HOST': 'host',
+        'PORT': 'port',  # Use 3306 if you are using MySQL
     }
 }
 
