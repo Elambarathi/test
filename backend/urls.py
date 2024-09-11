@@ -11,6 +11,5 @@ router.register(r'products', ProductViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('api/products/<int:pk>/', ProductDeleteView.as_view(), name='product-delete'),
     
 ]
